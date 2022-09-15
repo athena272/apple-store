@@ -1,9 +1,32 @@
 // pages/dynamic.tsx
 
-import { NextPage } from "next"
+import { GetServerSideProps, NextPage } from "next"
+import { ReactNode, useEffect, useState } from "react"
 import { Col, Container, Row } from "reactstrap"
 
-const Dynamic: NextPage = () => {
+type ApiResponse = {
+  name: string
+  timestamp: Date
+}
+
+export const getServerSideProps: GetServerSideProps = async () => {
+	const serverSideData: ApiResponse = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/hello`).then(res => res.json())
+
+  return {
+    props: {
+      serverSideData
+    }
+  }
+}
+
+const Dynamic: NextPage = (props: {
+  children?: ReactNode
+  serverSideData?: ApiResponse
+}) => {
+  const [clientSideData, setClientSideData] = useState<ApiResponse>()
+
+// ...
+
   return (
     <Container tag="main">
       <h1 className="my-5">
@@ -13,14 +36,20 @@ const Dynamic: NextPage = () => {
       <Row>
         <Col>
           <h3>
-            Gerado no servidor:
+            Gerado no servidor: 
           </h3>
+          <h2>
+          {props.serverSideData?.timestamp.toString()}
+          </h2>       
         </Col>
 
         <Col>
           <h3>
-            Gerado no cliente:
+            Gerado no cliente: 
           </h3>
+          <h2>
+            {clientSideData?.timestamp.toString()}
+          </h2>
         </Col>
       </Row>
     </Container>
