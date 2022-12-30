@@ -24,7 +24,7 @@ npm run dev
 ![image](https://user-images.githubusercontent.com/58920070/210026196-d2719252-568d-41ca-a2eb-fee46882dbd7.png)
 
 ## Produtos
-![image](https://user-images.githubusercontent.com/58920070/210026232-9d056898-f197-4e98-a132-ee2d6d9707c8.png)
+![image](https://user-images.githubusercontent.com/58920070/210026454-c73c1207-7a17-4b12-a0d3-7ec538dd2e9c.png)
 
 ## Detalhes do Produto
 ![image](https://user-images.githubusercontent.com/58920070/210026266-085dd9a9-f355-4d78-8251-1d9fb380668a.png)
