@@ -33,11 +33,6 @@ npm run dev
 ## Carrinho de Compras
 ![image](https://user-images.githubusercontent.com/58920070/210026325-bc32fa51-6f90-4855-a302-1800be1c2dc5.png)
 
-
-## Página de pesquisa
-### São exibidas até 12 receitas daquele ingrediente ou produto
-![image](https://user-images.githubusercontent.com/58920070/201811467-9bc9800b-c3bc-4f98-9bb2-7dce5eaa1913.png)
-
 ## Link de [Acesso](https://apple-store-beta.vercel.app/)
 
 ## Vídeo Apresentação
