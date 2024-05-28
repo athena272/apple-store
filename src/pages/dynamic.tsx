@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
     }
 }
-
+  
 const Dynamic: NextPage = (props: { serverSideData?: ApiResponse, children?: ReactNode }) => {
     const [clientSideData, setClientSideData] = useState<ApiResponse>()
 
