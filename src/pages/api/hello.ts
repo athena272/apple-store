@@ -8,7 +8,7 @@ type Data = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>,
+  res: NextApiResponse<Data>
 ) {
   const timestamp = new Date()
   res.status(200).json({ name: 'John Doe', timestamp })
