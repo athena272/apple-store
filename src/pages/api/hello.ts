@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
   name: string;
-  timestamp: Date
+  timestamp: Date,
 };
 
 export default function handler(
