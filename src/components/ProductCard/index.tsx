@@ -5,7 +5,7 @@ import { Button, Card, CardBody, CardSubtitle } from "reactstrap"
 import { ProductType } from "../../services/products"
 import SuccessToast from "../SuccessToast"
 
-interface ProductCardProps {
+type ProductCardProps = {
     product: ProductType
 }
 
@@ -45,6 +45,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
                 </CardBody>
             </Card>
+
             <SuccessToast toastIsOpen={toastIsOpen} setToastIsOpen={setToastIsOpen} />
         </>
     )
