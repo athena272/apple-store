@@ -11,10 +11,7 @@ export const getStaticProps: GetStaticProps = async () => {
     return { props: { products } }
 }
 
-const Products: NextPage = (props: {
-    children?: ReactNode
-    products?: ProductType[]
-}) => {
+const Products: NextPage = (props: { children?: ReactNode, products?: ProductType[] }) => {
     return (
         <>
             <Head>
