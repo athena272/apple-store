@@ -47,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const Product: NextPage = (props: { children?: ReactNode, product?: ProductType }) => {
     return (
-        <div>
+        <>
             <Head>
                 <title>{props.product!.name}</title>
                 <meta name="description" content={props.product!.description} />
@@ -60,7 +60,7 @@ const Product: NextPage = (props: { children?: ReactNode, product?: ProductType 
             <Container className="mt-5">
                 <ProductDetails product={props.product!} />
             </Container>
-        </div>
+        </>
     )
 }
 
