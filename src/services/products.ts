@@ -1,3 +1,5 @@
+// src/services/products.ts
+
 export type ProductType = {
     id: number
     name: string
@@ -8,10 +10,11 @@ export type ProductType = {
 }
 
 export const fetchProducts = async () => {
-    const products: ProductType[] = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/hello`).then(response => response.json())
+    const products: ProductType[] = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/products`).then(res => res.json())
     return products
 }
 
 export const fetchProduct = async (id: string | number) => {
-    const product: ProductType = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/hello/${id}`).then(response => response.json())
+    const product: ProductType = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/products/${id}`).then(res => res.json())
+    return product
 }
