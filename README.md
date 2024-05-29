@@ -1,6 +1,6 @@
 # Apple Store
 ## Sobre o projeto
-Aplicação de um catálogo clone de uma loja da Apple. O usuário pode olhar os produtos, adicioná-los e remové-los a um carrinho de comprars
+A aplicação é um catálogo clone de uma loja da Apple. O usuário pode olhar os produtos, adicioná-los e removê-los a um carrinho de compras
 
 ## Link de [Acesso](https://apple-store-beta.vercel.app/)
 
