@@ -3,7 +3,7 @@ import { Nav, Navbar } from "reactstrap";
 
 const Header = () => {
     return (
-        <Navbar container="md" color="dark" dark>
+        <Navbar container="md" color="dark" dark className="px-3">
             <Link href="/" passHref legacyBehavior>
                 <a className="navbar-brand">
                     Início
