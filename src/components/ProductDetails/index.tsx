@@ -19,6 +19,10 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
                     alt={product.name}
                     height={500}
                     width={600}
+                    style={{
+                        width: '100%',
+                        height: 'auto',
+                    }}
                 />
             </Col>
 
