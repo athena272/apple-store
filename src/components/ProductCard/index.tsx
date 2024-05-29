@@ -17,12 +17,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <>
             <Card>
                 <Link href={`/products/${id}`}>
-                    <Image className="card-img-top" src={imageUrl} alt="Product" height={500} width={600} />
+                    <Image className="card-img-top" src={imageUrl} alt="Product" height={201} width={201} />
                 </Link>
 
                 <CardBody>
-                    <Link href={`/products/${id}`}>
-                        <h5 className="card-title" style={{ cursor: 'pointer' }}>
+                    <Link href={`/products/${id}`} style={{ textDecoration: 'none' }}>
+                        <h5 className="card-title" style={{ cursor: 'pointer', color: '#212529' }}>
                             {name}
                         </h5>
                     </Link>
