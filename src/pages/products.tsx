@@ -22,7 +22,7 @@ const Products: NextPage = (props: { children?: ReactNode, products?: ProductTyp
         <>
             <Head>
                 <title>Nossos Produtos</title>
-                <meta name="description" content="Conheça todos os nossos produtos" />
+                <meta name="description" content="Conheça todos os nossos produtos. Conheça o mundo inovador da Apple e compre seu iPhone, iPad, Apple Watch, Mac e Apple TV. Explore acessórios, entretenimento e suporte especializado." />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="shortcut icon" href="/appleFav.png" type="image/x-icon" />
             </Head>
