@@ -22,7 +22,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     return {
         redirect: {
-            destination: '/products', permanent: false
+            destination: '/products',
+            permanent: false
         }
     }
 }
@@ -49,7 +50,8 @@ const Product: NextPage = (props: { children?: ReactNode, product?: ProductType 
             <Head>
                 <title>{props.product!.name}</title>
                 <meta name="description" content={props.product!.description} />
-                <link rel="icon" href="/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="shortcut icon" href="/appleFav.png" type="image/x-icon" />
             </Head>
 
             <Header />
