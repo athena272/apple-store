@@ -17,8 +17,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <>
             <Card>
                 <Link href={`/products/${id}`}>
-                    <Image className="card-img-top" src={imageUrl} alt="Product" height={201} width={201} />
-                </Link>
+                    <Image
+                        className="card-img-top"
+                        src={imageUrl}
+                        alt="Product"
+                        height={201}
+                        width={201}
+                        style={{
+                            width: '100%',
+                            height: 'auto',
+                        }}
+                    />
+                </Link> 
 
                 <CardBody>
                     <Link href={`/products/${id}`} style={{ textDecoration: 'none' }}>
