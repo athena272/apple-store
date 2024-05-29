@@ -3,11 +3,12 @@ import { Col, Row } from "reactstrap"
 import { ProductType } from "../../services/products"
 import ProductCard from "../ProductCard"
 
-interface ProductListProps {
+type ProductListProps = {
     products: ProductType[]
 }
 
 const ProductsList: React.FC<ProductListProps> = ({ products }) => {
+
     return (
         <>
             <Row className="g-5">
