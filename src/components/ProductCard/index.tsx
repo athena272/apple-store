@@ -5,7 +5,7 @@ import { Button, Card, CardBody, CardSubtitle } from "reactstrap"
 import { ProductType } from "../../services/products"
 import SuccessToast from "../SuccessToast"
 
-type ProductCardProps = {
+interface ProductCardProps {
     product: ProductType
 }
 
