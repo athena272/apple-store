@@ -10,16 +10,20 @@ const Header = () => {
                 </a>
             </Link>
             <Nav className="flex-row" navbar>
-                <Link href="/products" legacyBehavior>
-                    <a className="nav-link me-4">
-                        Produtos
-                    </a>
-                </Link>
-                <Link href="/cart" legacyBehavior>
-                    <a className="nav-link">
-                        Carrinho
-                    </a>
-                </Link>
+                <li>
+                    <Link href="/products" legacyBehavior>
+                        <a className="nav-link me-4">
+                            Produtos
+                        </a>
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/cart" legacyBehavior>
+                        <a className="nav-link">
+                            Carrinho
+                        </a>
+                    </Link>
+                </li>
             </Nav>
         </Navbar>
     )
