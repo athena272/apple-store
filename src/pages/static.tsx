@@ -1,4 +1,4 @@
-import { GetServerSideProps, NextPage } from "next"
+import { GetStaticProps, NextPage } from "next"
 import { ReactNode, useEffect, useState } from "react"
 import { Col, Container, Row } from "reactstrap"
 
@@ -7,17 +7,18 @@ type ApiResponse = {
     timestamp: Date
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
-    const serverSideData: ApiResponse = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/hello`).then(res => res.json())
+export const getStaticPrpos: GetStaticProps = async () => {
+    const staticData = await fetch(`${process.env.NEXT_PUBLIC_APIURL}/api/hello`).then(res => res.json())
 
     return {
         props: {
-            serverSideData
-        }
+            staticData
+        },
+        revalidate: (60 * 20) // 60 seconds * 20
     }
 }
-  
-const Dynamic: NextPage = (props: { serverSideData?: ApiResponse, children?: ReactNode }) => {
+
+const Static: NextPage = (props: { children?: ReactNode, staticData?: ApiResponse }) => {
     const [clientSideData, setClientSideData] = useState<ApiResponse>()
 
     useEffect(() => {
@@ -25,7 +26,7 @@ const Dynamic: NextPage = (props: { serverSideData?: ApiResponse, children?: Rea
     }, [])
 
     const fetchData = async () => {
-        const data = await fetch("/api/hello").then(res => res.json())
+        const data = await fetch(`/api/hello`).then(res => res.json())
         setClientSideData(data)
     }
 
@@ -38,9 +39,9 @@ const Dynamic: NextPage = (props: { serverSideData?: ApiResponse, children?: Rea
             <Row>
                 <Col>
                     <h3>
-                        Gerado no servidor:
+                        Gerado estaticamente durante o build:
                         <p>
-                            {props.serverSideData?.timestamp.toString()}
+                            {props.staticData?.timestamp.toString()}
                         </p>
                     </h3>
                 </Col>
@@ -58,4 +59,4 @@ const Dynamic: NextPage = (props: { serverSideData?: ApiResponse, children?: Rea
     )
 }
 
-export default Dynamic
+export default Static
