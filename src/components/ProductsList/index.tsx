@@ -8,7 +8,6 @@ interface ProductListProps {
 }
 
 const ProductsList: React.FC<ProductListProps> = ({ products }) => {
-
     return (
         <>
             <Row className="g-5">
