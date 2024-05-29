@@ -8,7 +8,13 @@ import { fetchProducts, ProductType } from '../services/products'
 
 export const getStaticProps: GetStaticProps = async () => {
     const products = await fetchProducts()
-    return { props: { products } }
+    return { 
+        props: 
+        { products 
+
+        },
+        revalidate: (60 * 20) // 60 seconds * 20
+    }
 }
 
 const Products: NextPage = (props: { children?: ReactNode, products?: ProductType[] }) => {
