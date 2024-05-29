@@ -34,12 +34,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
                 <CardBody>
                     <Link href={`/products/${id}`} style={{ textDecoration: 'none' }}>
-                        <h5 className="card-title" style={{ cursor: 'pointer', color: '#212529' }}>
+                        <h2 className="card-title fs-5" style={{ cursor: 'pointer', color: '#212529' }}>
                             {name}
-                        </h5>
+                        </h2>
                     </Link>
 
-                    <CardSubtitle className="mb-3 text-muted" tag="h6">
+                    <CardSubtitle className="mb-3 text-muted fs-6" tag="h3">
                         R$ {price}
                     </CardSubtitle>
 
